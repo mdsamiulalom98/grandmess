@@ -1,0 +1,1116 @@
+/*-------------------------------
+              01. Basic CSS
+--------------------------------*/
+:root {
+ --mycl:#ef4050;
+}
+* {
+   transition: 0.5s;
+}
+
+html {
+   overflow-x: hidden;
+}
+
+body {
+   font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+ul li {
+   display: inline-block;
+}
+
+a,
+a:hover {
+   text-decoration: none;
+}
+
+.bangla {
+   font-family: kalpurush;
+}
+
+@font-face {
+   font-family: "Abirvab";
+   font-style: normal;
+   font-weight: 900;
+   font-display: auto;
+   src: url(../webfonts/AbirvabHimel/Abirvab-Bold.ttf) format("truetype");
+}
+
+@font-face {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 300;
+   font-display: auto;
+   src: url(../webfonts/montserrat/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+   font-family: "Montserrat";
+   font-style: bold;
+   font-weight: 800;
+   font-display: auto;
+   src: url(../webfonts/montserrat/Montserrat-Bold.ttf) format("truetype");
+}
+
+
+/*@font-face {
+ font-family:"kalpurush";
+ font-style:normal;
+ font-weight:900;
+ font-display:auto;
+ src:url(../webfonts/montserrat/kalpurush.ttf) format("truetype");
+}*/
+
+
+/*-------------------------------
+              02. Preloader
+--------------------------------*/
+
+.spinner-wrapper {
+   position: fixed;
+   z-index: 999999;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: var(--mycl);
+}
+
+.spinner {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 3.75rem;
+   height: 1.25rem;
+   margin: -0.625rem 0 0 -1.875rem;
+   text-align: center;
+}
+
+.spinner>div {
+   display: inline-block;
+   width: 1rem;
+   height: 1rem;
+   border-radius: 100%;
+   background: #fff;
+   animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+   animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+   animation-delay: -0.16s;
+}
+
+@keyframes sk-bouncedelay {
+   0%,
+   80%,
+   100% {
+      transform: scale(0);
+   }
+   40% {
+      transform: scale(1);
+   }
+}
+
+
+/*-------------------------------
+              02. Top Header
+--------------------------------*/
+
+.top_header {
+   padding-left: 40px;
+   padding-right: 40px;
+}
+
+.top_header {}
+
+.logo {
+   width: 110px;
+   margin-right: auto;
+   position: relative;
+   padding: 10px;
+   height: 108px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.logo img {
+   width: 80px;
+}
+
+.header_menu {
+   width: 400px;
+   display: block;
+   margin-left: auto;
+}
+
+.number img {
+   width: 40px;
+   height: auto;
+   padding-right: 10px;
+}
+
+.number_text {
+   position: relative;
+   color: #000;
+}
+
+.number {}
+
+.number_text {
+   position: relative;
+   color: #000;
+   text-align: center;
+   padding: 0px;
+   font-weight: bold;
+   bottom: -14px;
+   font-family: montserrat;
+}
+
+.list {
+   padding: 10px;
+}
+
+.list ul {
+   width: 380px;
+   height: 40px;
+   text-align: center;
+   background-color: #e6e6e6;
+   display: block;
+   margin-left: auto;
+}
+
+.list ul li {
+   position: relative;
+   padding: 8px 7px;
+}
+
+.list ul li:after {
+   position: absolute;
+   content: '';
+   width: 2px;
+   height: 18px;
+   background-color: #000;
+   top: 12px;
+   left: -4px;
+}
+
+.list ul li:first-child:after {
+   display: none;
+}
+
+.list ul li a {
+   color: #000;
+   font-size: 19px;
+   font-weight: bold;
+   font-family: kalpurush;
+}
+
+.list ul li:last-child a {
+   color: #ef4050;
+}
+
+
+/*-------------------------------
+              04. Header CSS
+--------------------------------*/
+
+.header {
+   position: relative;
+}
+
+.hero_text {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+
+.header_inner {
+   position: relative;
+   min-height: 367px;
+}
+
+.item_inner p {
+   position: relative;
+   display: inline-block;
+   font-family: montserrat;
+}
+
+.item_inner p:before,
+.item_inner p:after {
+   position: absolute;
+   content: '';
+   width: 100px;
+   height: 2px;
+   background: #fff;
+}
+
+.item_inner p:before {
+   top: 14px;
+   left: -105px;
+}
+
+.item_inner p:after {
+   top: 14px;
+   right: -105px;
+}
+
+.hero_overlay {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba(0, 34, 69, .5);
+   z-index: 1;
+}
+
+
+/*-------------------------------
+              05. Normal Slider CSS
+--------------------------------*/
+
+.item_1,
+.item_2,
+.item_3 {
+   width: 100%;
+   height: 441px;
+   display: grid;
+   align-content: center;
+   justify-content: center;
+}
+
+.item_inner {
+   display: block;
+   text-align: center;
+   padding-top: 180px;
+}
+
+.item_inner h1 {
+   font-size: 50px;
+   color: #fff;
+   font-weight: bold;
+   padding-bottom: 110px;
+   font-family: kalpurush;
+}
+
+.item_1 {
+   background: rgba(134, 93, 93, 0.5) url(../img/hero_img1.png);
+   background-size: cover;
+   display: grid;
+   align-content: center;
+   justify-content: center;
+}
+
+.item_2 {
+   background: url(../img/hero_img2.png);
+   background-size: cover;
+}
+
+.item_3 {
+   background: url(../img/hero_img3.png);
+   background-size: cover;
+}
+
+
+/*-------------------------------
+              06. slick CSS
+--------------------------------*/
+
+.slick-prev,
+.slick-next {
+   width: 80px;
+   height: 40px;
+   z-index: 1;
+   opacity: 1;
+   transition: .5s;
+   background: #ef4050;
+   color: #fff;
+}
+
+.slick-prev {
+   left: 0;
+   border-radius: 0 15px 15px 0;
+}
+
+.slick-next {
+   right: 0;
+   border-radius: 15px 0 0 15px;
+}
+
+.slick-prev:hover::before,
+.slick-prev:focus::before,
+.slick-next:hover::before,
+.slick-next:focus::before {
+   color: #EF4050;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+   color: #ef4050;
+   outline: none;
+   background: #fff;
+}
+
+.slick-prev::before,
+.slick-next::before {
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   font-size: 30px;
+   color: #ffffff;
+}
+
+.slick-prev::before {
+   content: "\f104";
+}
+
+.slick-next::before {
+   content: "\f105";
+}
+
+.slick-dots {
+   z-index: 2;
+}
+
+.slick-dots li button:before {
+   color: #ffffff;
+   font-size: 15px;
+}
+
+.slick-dots li.slick-active button:before {
+   color: #FF6F61;
+}
+
+.slick-dotted.slick-slider {
+   margin-bottom: 0;
+}
+
+
+/*-------------------------
+        slick dot override
+--------------------------*/
+
+.slick-dots {
+   padding: 0;
+   margin: 0;
+}
+
+.slick-dots li {
+   width: 20px;
+   height: 20px;
+   margin: 0 5px;
+   padding: 0;
+}
+
+.slick-dots li button {
+   width: 20px;
+   height: 20px;
+   padding: 5px;
+   background: transparent;
+   border-radius: 50%;
+   position: relative;
+}
+
+.slick-dots li button:before {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 20px;
+   height: 20px;
+   content: '';
+   text-align: center;
+   opacity: 1;
+   background: #ef4050;
+   border-radius: 50%;
+}
+
+.slick-dots li.slick-active button:before {
+   opacity: 0.5;
+}
+
+
+/* index slick dot */
+
+.header-slider .slick-dots {
+   bottom: 25px;
+}
+
+
+/*-------------------------------
+              02. slick my portion
+--------------------------------*/
+
+.slick-slide img {
+   width: 100%;
+}
+
+
+/*-------------------------
+            service
+--------------------------*/
+
+.our_service {}
+
+.service_inner {}
+
+.service_head {
+   position: relative;
+   padding: 10px 0;
+   margin: 10px 0;
+   background: #e8e8e8;
+}
+
+.service_head h3 {
+   display: block;
+   text-align: center;
+   font-weight: bold;
+   font-family: kalpurush;
+}
+
+.service_slider_inner {
+   padding: 40px 0;
+}
+
+.service-slider {}
+
+.service-item {
+   display: block;
+   text-align: center;
+}
+
+.service-pic {
+   width: 200px;
+   margin: 0 auto;
+}
+
+.service-body {
+   display: block;
+   text-align: center;
+}
+
+.service-body h3 {
+   color: #ef4050;
+   font-size: 30px;
+   font-family: kalpurush;
+   padding-top: 10px;
+}
+
+.service-body button {
+   border: 1px solid #ef4050;
+   border-radius: 5px;
+   padding: 5px 10px;
+}
+
+.service-body button:hover {
+   color: #fff;
+   background: #ef4050;
+}
+
+
+/*----------------------------
+        Testimonial CSS 
+------------------------------*/
+
+.testimonial {
+   position: relative;
+   width: 100%;
+   text-align: center;
+}
+
+.testimonial_inner {
+   border: 3px solid #ef4050;
+   padding-bottom: 100px;
+}
+
+.testimonial .container {
+   max-width: 960px;
+}
+
+.about-page .testimonial {
+   padding-bottom: 90px;
+}
+
+.testimonial .testimonial-slider-nav {
+   position: relative;
+   width: 300px;
+   margin: 0 auto;
+}
+
+.testimonial .testimonial-slider-nav .slick-slide {
+   position: relative;
+   opacity: 0;
+   transition: .5s;
+}
+
+.testimonial .testimonial-slider-nav .slick-active {
+   opacity: 1;
+}
+
+.testimonial .testimonial-slider-nav .slick-center {
+   z-index: 1;
+}
+
+.testimonial .testimonial-slider-nav .slick-slide img {
+   position: relative;
+   display: block;
+   margin-top: 37px;
+   width: 100%;
+   height: auto;
+   border-radius: 50%;
+}
+
+.testimonial .testimonial-slider-nav .slider-nav img {
+   border: 10px solid #4e4d43;
+}
+
+.testimonial .testimonial-slider {
+   position: relative;
+   margin-top: 0;
+   padding-top: 0;
+}
+
+.testimonial .testimonial-slider h3 {
+   font-size: 22px;
+   font-weight: bold;
+   font-family: kalpurush;
+}
+
+.testimonial .testimonial-slider h4 {
+   font-size: 14px;
+}
+
+.testimonial .testimonial-slider p {
+   font-size: 18px;
+   margin: 0;
+   padding: 0 150px;
+   color: #000;
+   font-family: kalpurush;
+}
+
+
+/*---------------------------
+        footer
+------------------------------*/
+
+.footer {
+   background: #ef4050;
+}
+
+.footer_inner {
+   position: relative;
+   padding: 40px 0;
+   padding-bottom: 30px;
+   display: block;
+}
+
+.footer_inner ul li {
+   display: block;
+}
+
+.footer_inner h3,
+p {
+   color: #fff;
+   font-family: kalpurush;
+}
+
+.footer_inner h3 {
+   font-size: 35px;
+}
+
+.footer_inner img {
+   width: 250px;
+   height: auto;
+}
+
+.footer_inner ul {
+   list-style: none;
+}
+
+.footer_inner ul li a {
+   color: #fff;
+   text-decoration: none;
+}
+
+.footer_inner i {
+   padding-right: 10px;
+}
+
+
+/*--------------------------------
+            grand mess 
+----------------------------------*/
+
+.black-bg {
+   background: #000;
+}
+
+.grand-mess .slick-prev,
+.grand-mess .slick-next {
+   width: 80px;
+   height: 40px;
+   z-index: 1;
+   opacity: 1;
+   transition: .5s;
+   background: #c2c2c2;
+   color: #fff;
+}
+
+.header_left_inner h1 {
+   color: #fff;
+   font-size: 35px;
+   padding: 70px 15px 15px 80px;
+   display: block;
+   margin: 0 auto;
+}
+
+.header_left_inner h1 span {
+   font-size: 40px;
+}
+
+.header_left_inner div {
+   background: #fff;
+   width: 90%;
+   margin: 0 auto;
+   padding: 10px;
+   border: 8px solid #2d314c;
+   border-radius: 8px;
+}
+
+.header_left_inner input {
+   width: 80%;
+   border: none;
+}
+
+.header_left_inner i {
+   font-size: 19px;
+   padding-right: 10px;
+}
+
+.header_left_inner input::placeholder {
+   font-size: 12px;
+}
+
+
+/* choose */
+
+.sec_choose h3 {
+   display: block;
+   text-align: center;
+   padding: 20px;
+}
+
+.inner_choose {
+   padding: 20px;
+}
+
+.pic_choose {
+   width: 100px;
+   display: block;
+   margin: 0 auto;
+}
+
+.pic_choose img {
+   width: 100%;
+}
+
+.text_choose {
+   text-align: center;
+   padding-top: 15px;
+}
+
+
+/*pricing*/
+.pricing_header{
+    padding: 20px 0px;
+}
+.pricing_header h3{
+    text-align: center;
+}
+.pricing {
+   position: relative;
+   width: 100%;
+   background: #bcbec0;
+   height: auto;
+   overflow: hidden;
+   padding: 50px; 
+}
+
+.price_small,
+.price_big {
+   position: relative;
+   background: #bcbec0;
+   width: 100%;
+   display: block;
+   margin: auto;
+   margin-bottom: 30px;
+   top: 30px;
+   border: 1px solid #bcbec0;
+}
+
+.price_small:hover,
+.price_big:hover {
+   border-color: #ef4050;
+}
+
+.price_small:first-child {
+   right: 0;
+}
+
+.price_small:last-child {
+   left: 0;
+}
+
+.price_big {
+   width: 100%;
+   top: 0;
+}
+
+.price_small ul li,
+.price_big ul li {
+   display: block;
+   border-bottom: 1px solid #fff;
+   text-align: center;
+   padding: 10px;
+   background: #ebebec;
+   font-size: 19px;
+   font-weight: bold;
+}
+
+.price_big ul li {
+   padding: 15px;
+}
+
+.price_small ul li:nth-child(2) {
+   background: #fff;
+}
+
+.price_big ul li:nth-child(2) {
+   background: #dcddde;
+}
+
+.price_small ul li span,
+.price_big ul li span {
+   color: #ef4050;
+   font-size: 29px;
+   font-weight: bold;
+}
+
+.price_small ul li a,
+.price_big ul li a {
+   border: 2px solid #ef4050;
+   padding: 3px 10px;
+   border-radius: 5px;
+   color: #333;
+   font-size: 14px;
+}
+
+.price_small:hover ul li a,
+.price_big:hover ul li a {
+   color: #fff;
+   background: #ef4050;
+}
+
+
+/*-------------------------------
+              02. Royal
+--------------------------------*/
+
+
+/*************************/
+
+
+/*     09. Product     */
+
+
+/*************************/
+
+.tabs-container {
+   width: 100%;
+   margin-right: auto;
+   margin-left: auto;
+   padding-top: 2rem;
+   padding-bottom: 0.75rem;
+}
+
+.tabs-container h2 {
+   text-align: center;
+}
+
+.nav-tabs {
+   justify-content: center;
+   margin-bottom: 1.125rem;
+   border-bottom: none;
+}
+
+.nav-link {
+   border: none;
+   font: 700 1.375rem/1.375rem "Montserrat", sans-serif;
+   text-decoration: none;
+   transition: all 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+   color: #14bf98;
+}
+
+.nav-link .fas {
+   margin-right: 0.125rem;
+   font-size: 0.875rem;
+   vertical-align: 20%;
+}
+
+
+/*------------------------
+        nav tab edit
+------------------------*/
+
+.nav-tabs {
+   text-align: center;
+   display: block;
+}
+
+.nav-tabs .nav-item {
+   margin: 50px 12px;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link.active {
+   color: #fff;
+   background-color: #ef4050;
+   border-color: #ef4050;
+}
+
+.nav-tabs .nav-link {
+   border: 2px solid #ef4050;
+   border-radius: 8px;
+   width: 100%;
+   color: #000;
+   font-weight: bold;
+   font-size: 16px;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+   border-color: #ef4050;
+}
+
+.tab-content {
+   background: #ececec;
+}
+
+.slick-dotted.slick-pro-slider {
+   margin-bottom: 0;
+}
+
+
+/*-----------slick override-------------*/
+
+.slick-dots {
+   padding: 0;
+   margin: 0;
+}
+
+.slick-dots li {
+   width: 20px;
+   height: 20px;
+   margin: 0 5px;
+   padding: 0;
+}
+
+.slick-dots li button {
+   width: 20px;
+   height: 20px;
+   padding: 5px;
+   background: transparent;
+   border-radius: 50%;
+   position: relative;
+}
+
+.slick-dots li button:before {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 20px;
+   height: 20px;
+   content: '';
+   text-align: center;
+   opacity: 1;
+   background: #ef4050;
+   border-radius: 50%;
+}
+
+.slick-dots li.slick-active button:before {
+   opacity: 0.5;
+}
+
+
+/*------------------my portion -------------*/
+
+.slider-img {
+   width: 100%;
+   display: block;
+}
+
+.slick-slide img {
+   max-width: 220px;
+   width: 100%;
+   display: block;
+   margin: 0 auto;
+}
+
+.slider-item {
+   height: auto;
+   background: #fff;
+   padding: 40px 18px;
+   margin: 10px;
+}
+
+.slider-price {
+   text-align: center;
+}
+
+.slider-price h3 {
+   font-size: 19px;
+   font-weight: bold;
+}
+
+.slider-price p {
+   color: #9abb24;
+   font-size: 20px;
+}
+
+.slider-price button {
+   border: none;
+   border-radius: 5px;
+   background: #312a26;
+   color: #fff;
+   padding: 10px 20px;
+   font-weight: bold;
+   display: block;
+   margin: 0 auto;
+}
+
+
+/* product 2 */
+
+.nav-tabs {
+   text-align: center;
+   display: block;
+}
+
+.nav-tabs .nav-item {
+   margin: 50px 12px;
+}
+
+.product_name {
+   display: block;
+   text-align: center;
+   padding: 50px 0;
+}
+
+.product_name h3 {
+   display: inline-block;
+   color: #fff;
+   background-color: #ef4050;
+   border: 2px solid #ef4050;
+   border-radius: 8px;
+   font-weight: bold;
+   font-size: 16px;
+   padding: 10px 20px;
+}
+
+.product_slider_container {
+   background: #ececec;
+}
+
+
+/*gallery*/
+
+.gallery {}
+
+.gallery_head {}
+
+.gallery_body {
+   padding: 20px 0;
+}
+
+.gallery_body img {
+   width: 100%;
+}
+
+.gallery_head h3 {
+   display: block;
+   text-align: center;
+   padding: 10px 0;
+}
+
+.video_right video {
+   width: 100%;
+   height: auto;
+}
+
+
+/*-------------------------------
+              02. Responsive
+--------------------------------*/
+
+
+/*responsive*/
+
+@media(max-width: 990px) {
+   .testimonial .testimonial-slider p {
+      font-size: 18px;
+      padding: 0 50px;
+   }
+   .footer_inner {
+      padding: 20px 0;
+   }
+}
+
+@media(max-width: 768px) {
+   .logo {
+      margin: 0 auto;
+      padding: 10px;
+   }
+   .list ul {
+      margin: 0 auto;
+   }
+   .testimonial .testimonial-slider p {
+      font-size: 18px;
+      padding: 0 10px;
+   }
+   .nav-tabs .nav-item {
+      margin: 10px 7px;
+   }
+   .footer_inner {
+      text-align: center;
+   }
+   .pricing{
+    padding-top: 40px;
+   }
+   .price_small{
+        top: 0px;
+   }
+   .price_big{
+        top: 0px;
+    }
+}
